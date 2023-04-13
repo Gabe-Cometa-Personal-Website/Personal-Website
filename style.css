@@ -1,135 +1,219 @@
 body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    background-image: url('https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-image: url("https://images.unsplash.com/photo-1479064312651-24524fb55c0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-  }
-  
-  .logo {
-    margin-right: auto;
-    margin-left: 40px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0 40px 0 0;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 40px 0 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-photo {
+  max-width: 80%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.home-text {
+  color: black;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-family: "Fasthand", cursive;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+/* about style section */
+
+.about-banner {
+  background-image: url("https://images.unsplash.com/photo-1505970146922-6c6bb697b1b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80");
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
+}
+
+body.about {
+  background-position: top;
+  margin-top: 70px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.portfolio-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+}
+
+.project-image {
+  max-width: 140%;
+  height: auto;
+  margin-left: 20px;
+}
+
+.project {
+  margin-left: 100px; /* add margin to the left of the project description */
+}
+
+.img-sec {
+  flex-basis: 200px;
+}
+
+.logo-anchor {
+  text-decoration: none; /* removes the underline */
+  color: white; /* sets the text color */
+  outline: none; /* removes the outline */
+}
+
+.logo-anchor:hover {
+  color: blue; /* changes the text color on hover */
+}
+
+/* Styles for iPad screens */
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    font-size: 16px;
+    background-position: top;
+    background-size: auto;
   }
 
   .container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
-    
-  }
-
-  .profile-photo {
-    max-width: 80%;
-    border-radius: 50%;
-    margin-left: 20px;
+    height: auto;
   }
 
   .home-text {
-    color: black;
-    margin-bottom: 10px;
+    margin-top: 20px; /* add margin top to separate from the profile photo */
   }
 
-
-  h4 {
-    font-family: 'Fasthand', cursive;
-    font-size: 20px;
-    margin-left: 30px;
+  .profile-photo {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px; /* add margin bottom to give some space */
+    order: -1; /* make profile-photo the first item in the column */
   }
+}
 
-  h1 {
-    margin-left: 20px;
-  }
+/* Styles for mobile screens */
 
-/* about style section */
-
-  .about-banner {
-    background-image: url('https://images.unsplash.com/photo-1505970146922-6c6bb697b1b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80');
-    background-size: cover;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 2px 2px #000;
-  }
-
-  body.about {
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
     background-position: top;
-    margin-top: 70px
+    background-size: 2000px;
   }
 
-
-  .about-content {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;    
-}
-
-
-.portfolio-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 30vh;
+    height: auto;
   }
 
-  .project-image {
-    max-width:140%;
-    height:auto;
-    margin-left: 20px;
-}
+  .home-text {
+    margin-top: 100px; /* add margin top to separate from the profile photo */
+  }
 
-.project {
-    margin-left: 100px; /* add margin to the left of the project description */
-    
-}
+  .profile-photo {
+    display: block;
+    margin: 50px auto;
+    width: 200%;
+    max-width: 300px;
+    margin-bottom: 20px; /* add margin bottom to give some space */
+  }
+
+  .portfolio-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 40px 250px 40px;
+  }
 
   .img-sec {
-    flex-basis: 200px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* this creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+    order: 1;
   }
 
-  .logo-anchor { 
-        text-decoration: none; /* removes the underline */
-        color: white; /* sets the text color */
-        outline: none; /* removes the outline */
+  .project {
+    margin: auto; 
   }
+}
 
-  .logo-anchor:hover{
-        color: blue; /* changes the text color on hover */
-  }
+.form {
+  margin-top: 100px;
+}
+
